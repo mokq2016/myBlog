@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ShiroWeb2"
+  id="myeclipse.1475303896168"
+  context-root="/ShiroWeb2"
+  j2ee-spec="6.0"
+  archive="ShiroWeb2.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

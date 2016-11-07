@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.java1234.dao.ArticleDao">
+	
+	<resultMap type="Article" id="ArticleResult">
+		<id property="id" column="id"/>
+		<result property="title" column="title"/>
+		<result property="content" column="content"/>
+		<result property="createTime" column="createTime"/>	
+		<result property="articleTypeId" column="articleTypeId"/>
+		<result property="userId" column="userId"/>
+		<result property="clickHit" column="clickHit"/>
+		<result property="replyNum" column="replyNum"/>
+		<result property="keyWord" column="keyWord"/>
+		<result property="summary" column="summary"/>
+	</resultMap>
+	
+	<resultMap type="Map" id="Article2Result">
+		<result property="time" column="time"/>
+		<result property="count" column="num"/>
+	</resultMap>
+	
+	<insert id="addArticle" parameterType="Article">
+		insert into td_article(title,content,createTime,articleTypeId,userId,clickHit,replyNum,keyWord,summary)
+		 values(#{title},#{content},#{createTime},#{articleTypeId},#{userId},#{clickHit},#{replyNum},#{keyWord},#{summary})
+	</insert>
+	
+	<select id="getByPage"  parameterType="Map" resultMap="ArticleResult">
+		select * from td_article
+		<where>
+			<if test="typeId != null">
+			articleTypeId = #{typeId}
+			</if>
+			<if test="createTime != null">
+				and createTime like #{createTime}
+			</if>
+		</where>
+		<if test="start != null and totalSize != null">
+			limit #{start},#{totalSize}
+		</if>
+	</select>
+	<select id="getCount" parameterType="Map" resultType="Integer">
+		select count(*) from td_article
+		<where>
+			<if test="typeId != null">
+				articleTypeId = #{typeId}
+			</if>
+			<if test="createTime != null">
+				and createTime like #{createTime}
+			</if>
+		</where>
+	</select>
+	
+	<select id="getCountByTime" resultMap="Article2Result">
+		select substring(createTime,1,7) time,count(*) num from td_article group by substring(createTime,1,7)
+	</select>
+	
+	<select id="getById" parameterType="Integer" resultType="Article">
+		select * from td_article where id=#{id}
+	</select>
+</mapper> 

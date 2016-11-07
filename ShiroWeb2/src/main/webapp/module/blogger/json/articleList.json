@@ -1,0 +1,28 @@
+{
+	"currentPage":1,
+	"totalPage":10,
+	"articleList":[
+	{
+	"id":1,
+	"title":"123",
+	"content":"333",
+	"createTime":"2016-10-11 22:54:20",
+	"articleTypeId":2,
+	"userId":2,
+	"clickHit":222,
+	"replyNum":2223,
+	"keyWord":"3334"
+	}
+	,{
+	id:2,
+	title:"123",
+	content:"333",
+	createTime:"2016-10-11 22:54:20",
+	articleTypeId:2,
+	userId:2,
+	clickHit:222,
+	replyNum:2223,
+	keyWord:"3334"
+	}
+	]
+}

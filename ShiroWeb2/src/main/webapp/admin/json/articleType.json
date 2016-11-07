@@ -1,0 +1,44 @@
+{"total": 10,
+    "rows": [
+        {
+            "id": 1,
+            "articleType": "hibernate"
+        },
+        {
+            "id": 2,
+            "articleType": "hibernate"
+        },
+        {
+            "id": 3,
+            "articleType": "hibernate"
+        },
+        {
+            "id": 4,
+            "articleType": "hibernate"
+        },
+        {
+            "id": 4,
+            "articleType": "hibernate"
+        },
+        {
+            "id": 4,
+            "articleType": "hibernate"
+        },
+        {
+            "id": 4,
+            "articleType": "hibernate"
+        },
+        {
+            "id": 4,
+            "articleType": "hibernate"
+        },
+        {
+            "id": 4,
+            "articleType": "hibernate"
+        },
+        {
+            "id": 4,
+            "articleType": "hibernate"
+        }
+    ]
+}

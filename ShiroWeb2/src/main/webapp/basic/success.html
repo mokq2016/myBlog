@@ -1,0 +1,25 @@
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>success.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+   ${info }
+欢迎你!
+<shiro:hasRole name="admin">
+	欢迎有admin角色的用户！<shiro:principal/>
+</shiro:hasRole>
+<shiro:hasPermission name="student:create">
+	欢迎有student:create权限的用户！<shiro:principal/>
+</shiro:hasPermission>
+  </body>
+</html>

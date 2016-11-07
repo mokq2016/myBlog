@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../static/bootstrap3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/bootstrap3/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../static/css/blog.css">
+</head>
+<script src="../../static/bootstrap3/js/jquery-1.11.2.min.js"></script>
+<script src="../../ajax/ajaxRequest.js"></script>
+<script src="js/list.js"></script>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+function loadimage(){
+		document.getElementById("randImage").src="image.jsp?"+Math.random();
+	}
+	
+
+</script>
+
+<body>
+<div id="articleList" style="display:none">
+<div class="data_list">
+    <div class="data_list_title">
+        <img src="../../static/images/list_icon.png"/>
+        最新博客</div>
+    <div class="datas" id="articleListDiv">
+        
+    </div>
+</div>
+
+<div>
+    <nav>
+        <ul class="pagination pagination-sm" id="pager">
+			
+        </ul>
+    </nav>
+</div>
+</div>
+<div id="articleContentDiv" style="display:block">
+	<div class="data_list">
+	<div class="data_list_title">
+		<img src="../../static/images/blog_show_icon.png"/>
+		博客信息
+	</div>
+	<div>
+	   <div class="blog_title"><h3><strong id="articleTitle"></strong></h3></div>
+	   <div style="padding-left: 330px;padding-bottom: 20px;padding-top: 10px">
+		<div class="bshare-custom"><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=1&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+	   </div>
+		<div class="blog_info" id="articleInfo">
+			
+		</div>
+		<div class="blog_content" id="articleContent">
+			
+		</div>
+		<div class="blog_keyWord">
+			<font><strong>关键字：</strong></font>
+			
+		</div>
+		<div class="blog_lastAndNextPage">
+			
+		</div>
+	</div>
+</div>
+<div class="data_list">
+	<div class="data_list_title">
+		<img src="../../static/images/comment_icon.png"/>
+		评论信息    
+	</div>
+	<div class="commentDatas">
+		
+	</div>
+</div>
+
+<div class="data_list" >
+	<div class="data_list_title">
+		<img src="../../static/images/publish_comment_icon.png"/>
+		发表评论
+	</div>
+	<div class="publish_comment">
+			<div>
+				<textarea style="width: 100%" rows="3" id="content" name="content" placeholder="来说两句吧..."></textarea>
+			</div>
+			<div class="verCode">
+				验证码：<input type="text" value="" name="imageCode"  id="imageCode" size="10" onkeydown= "if(event.keyCode==13)form1.submit()"/>&nbsp;<img onclick="javascript:loadimage();"  title="换一张试试" name="randImage" id="randImage" src="image.jsp" width="60" height="20" border="1" align="absmiddle"> 
+			</div>
+			<div class="publishButton">
+				<button class="btn btn-primary" type="button" onclick="submitData()">发表评论</button>
+			</div>
+		</form>
+	</div>
+</div>
+</div>
+</body>
+</html>
